@@ -1,4 +1,6 @@
 package quiz;
+/* Welcome to my Quiz Generator. It is already in description so i will go straigth to code. You need to create a database QuizJava in mysql 
+password is India@123, plz make changes as necessary,mysql must be installed.*/
 
 import java.awt.Container;
 import java.awt.EventQueue;
@@ -17,7 +19,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.util.Random;
-public class quiz1 extends JFrame {
+
+public class quiz1 extends JFrame {//main class
 
 	private JPanel contentPane,contentPane1;
 	private JButton btnNewButtonk,btnNewButtonexit,btnNewButtonn,J;
@@ -51,7 +54,7 @@ public class quiz1 extends JFrame {
 			}
 		});
 	}
-	class Data
+	class Data//datatype created to store data
 	{
 	String a,b,c,d,e,f,g;
 	Data(String a,String b, String c,String d,String e,String f,String g)
@@ -66,7 +69,7 @@ public class quiz1 extends JFrame {
 	}
 	}
 	
-	void attempt12(Data j) {
+	void attempt12(Data j) {//result checked display
 		f.dispose();
 		f=new JFrame();
 		JPanel con=new JPanel();
@@ -154,7 +157,7 @@ public class quiz1 extends JFrame {
 		}});
 	}
 	
-	void result() {
+	void result() {//display of result
 		f.dispose();
 		f=new JFrame();
 		JPanel con=new JPanel();
@@ -184,7 +187,7 @@ public class quiz1 extends JFrame {
 		f.setVisible(true);
 		f.setSize(450,300);
 	}
-	void attempt1(Data j) {
+	void attempt1(Data j) {//attempting quiz
 		f.dispose();
 		f=new JFrame();
 		JPanel con=new JPanel();
@@ -265,7 +268,7 @@ public class quiz1 extends JFrame {
 			}
 		}});
 	}
-	void attempt() {
+	void attempt() {//working while attemptng
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection cn=DriverManager.getConnection("jdbc:mysql://localhost/QuizJava?user=root&password=India@123");
@@ -302,7 +305,7 @@ public class quiz1 extends JFrame {
 		catch(Exception be) {
 		}
 	}
-	void input() {
+	void input() {//finding id
 		f=new JFrame();
 		content = new JPanel();
 		JLabel lblNewLabel111 = new JLabel("Enter Id");
@@ -355,7 +358,7 @@ public class quiz1 extends JFrame {
 		f.setSize(450,300);
 	}
 	
-	void next() {
+	void next() {//moving to next Question
 		try {
 			if (qq!=0) 
 				f.dispose();
@@ -412,7 +415,7 @@ public class quiz1 extends JFrame {
 		catch(Exception be) {
 		}
 	}
-	void next1() {
+	void next1() {//storing data
 		try {
 		String w=lblNewLabelC.getText();
 		if (w.compareTo("")!=0) {
@@ -472,7 +475,7 @@ public class quiz1 extends JFrame {
 		catch(Exception be) {
 		}
 	}
-	public quiz1() {
+	public quiz1() {//main class constructor
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
